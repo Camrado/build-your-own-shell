@@ -15,7 +15,7 @@ public static class ExternalCommandRunner
         
         var startInfo = new ProcessStartInfo
         {
-            FileName = command,
+            FileName = filePath,
             Arguments = arguments,
             UseShellExecute = false,
             RedirectStandardOutput = false,
