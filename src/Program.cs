@@ -13,10 +13,11 @@ while (true)
         continue;
     }
 
-    var command = input.Split(' ')[0];
-    if (command == "echo")
+    var command = input.Split(' ', 2);
+    
+    if (command[0] == "echo")
     {
-        Console.WriteLine(input);
+        Console.WriteLine(command[1]);
     }
     else
     {
