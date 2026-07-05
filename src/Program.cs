@@ -1,10 +1,7 @@
-class Program
+while (true)
 {
-    static void Main()
-    {
-        Console.Write("$ ");
-        
-        var input = Console.ReadLine();
-        Console.WriteLine($"{input}: command not found");
-    }
+    Console.Write("$ ");
+
+    var input = Console.ReadLine();
+    Console.WriteLine($"{input}: command not found");
 }
