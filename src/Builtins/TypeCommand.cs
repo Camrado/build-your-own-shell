@@ -12,7 +12,7 @@ public static class TypeCommand
             return;
         }
 
-        var filePath = PathResolver.FindExecutable(argument);
+        var filePath = PathResolver.FindExecutableFromPath(argument);
         Console.WriteLine(filePath is not null ? $"{argument} is {filePath}" : $"{argument}: not found");
     }
 }

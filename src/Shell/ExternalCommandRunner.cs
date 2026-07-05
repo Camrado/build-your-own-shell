@@ -7,7 +7,7 @@ public static class ExternalCommandRunner
 {
     public static void ExecuteExternalProgram(string command, string arguments, string rawInput)
     {
-        var filePath = PathResolver.FindExecutable(command);
+        var filePath = PathResolver.FindExecutableFromPath(command);
         if (filePath is null)
         {
             Console.WriteLine($"{rawInput}: command not found");

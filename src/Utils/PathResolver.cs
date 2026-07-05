@@ -2,7 +2,7 @@
 
 public static class PathResolver
 {
-    public static string? FindExecutable(string argument)
+    public static string? FindExecutableFromPath(string argument)
     {
         var path = Environment.GetEnvironmentVariable("PATH");
         if (string.IsNullOrEmpty(path))
