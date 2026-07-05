@@ -11,14 +11,7 @@ public static class TypeCommand
         }
 
         var filePath = FindExecutable(argument);
-        if (filePath is not null)
-        {
-            Console.WriteLine($"{argument} is {filePath}"); 
-        }
-        else
-        {
-            Console.WriteLine($"{argument}: not found");
-        }
+        Console.WriteLine(filePath is not null ? $"{argument} is {filePath}" : $"{argument}: not found");
     }
 
     private static string? FindExecutable(string argument)
