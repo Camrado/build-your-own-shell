@@ -11,11 +11,12 @@ public static class ExternalCommandRunner
         if (filePath is null)
         {
             Console.WriteLine($"{rawInput}: command not found");
+            return;
         }
         
         var startInfo = new ProcessStartInfo
         {
-            FileName = filePath,
+            FileName = command,
             Arguments = arguments,
             UseShellExecute = false,
             RedirectStandardOutput = false,
