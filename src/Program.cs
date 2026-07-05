@@ -8,5 +8,12 @@ while (true)
         break;
     }
     
-    Console.WriteLine($"{input}: command not found");
+    if (input == "echo")
+    {
+        Console.WriteLine(input);
+    }
+    else
+    {
+        Console.WriteLine($"{input}: command not found");
+    }
 }
