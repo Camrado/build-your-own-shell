@@ -7,6 +7,7 @@ public static class TypeCommand
         if (BuiltinRegistry.IsBuiltin(argument))
         {
             Console.WriteLine($"{argument} is a shell builtin");
+            return;
         }
 
         var filePath = FindExecutable(argument);
