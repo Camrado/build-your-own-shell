@@ -1,3 +1,5 @@
+List<string> builtInCommands = ["echo", "type", "exit"];
+
 while (true)
 {
     Console.Write("$ ");
@@ -18,6 +20,17 @@ while (true)
     if (command[0] == "echo")
     {
         Console.WriteLine(command[1]);
+    }
+    else if (command[0] == "type")
+    {
+        if (builtInCommands.Contains(command[1]))
+        {
+            Console.WriteLine($"{command[1]} is a shell builtin");
+        }
+        else
+        {
+            Console.WriteLine($"{command[1]}: not found");
+        }
     }
     else
     {
