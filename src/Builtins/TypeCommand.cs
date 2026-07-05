@@ -32,7 +32,7 @@ public static class TypeCommand
         foreach (var directory in directories)
         {
             var fullPath = Path.Combine(directory, argument);
-            if (File.Exists(fullPath))
+            if (File.Exists(fullPath) && IsExecutable(fullPath))
             {
                 return fullPath;
             }
