@@ -8,7 +8,13 @@ while (true)
         break;
     }
     
-    if (input == "echo")
+    if (input is null)
+    {
+        continue;
+    }
+
+    var command = input.Split(' ')[0];
+    if (command == "echo")
     {
         Console.WriteLine(input);
     }
