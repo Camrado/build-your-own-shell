@@ -46,7 +46,7 @@ public sealed class Shell
                 break;
 
             default:
-                Console.WriteLine($"{rawInput}: command not found");
+                ExternalCommandRunner.ExecuteExternalProgram(command, argument, rawInput);
                 break;
         }
     }
